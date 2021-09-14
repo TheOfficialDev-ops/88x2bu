@@ -11,3 +11,4 @@ wget -O - https://raw.githubusercontent.com/TheOfficialDev-ops/88x2bu/main/insta
 To activate the driver. Use the following command
 ```
 modprobe 88x2bu
+```
