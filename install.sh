@@ -11,8 +11,8 @@ echo "${BLUE}Driver Installer for 88x2bu Wifi Adapter${NC}"
 
 echo ""
 
-if [ "$EUID" -ne 0 ] then
-    echo "${RED}Installer must be run with ROOT permissions (sudo)${NC}"
+if [ "$EUID" -ne 0 ]
+    then echo "${RED}Installer must be run with ROOT permissions (sudo)${NC}"
     exit
 fi
 
