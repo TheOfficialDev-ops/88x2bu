@@ -2,6 +2,12 @@
 Created by The Official Dev
 
 ## Installation
+**WARNING: THE DAEMON IS GOING TO REBOOT YOUR MACHINE!**
 ```
-wget -O - https://github.com/TheOfficialDev-ops/88x2bu | bash
+wget -O - https://raw.githubusercontent.com/TheOfficialDev-ops/88x2bu/main/install.sh | bash
 ```
+
+## Activation
+To activate the driver. Use the following command
+```
+modprobe 88x2bu

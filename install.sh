@@ -6,27 +6,27 @@ BLUE='\033[1;34m'
 YELLOW='\033[1;33m'
 NC='\033[0m'
 
-echo "Copyright (c) The Official Dev"
-echo "Driver Installer for 88x2bu Wifi Adapter"
+echo "${BLUE}Copyright (c) The Official Dev${NC}"
+echo "${BLUE}Driver Installer for 88x2bu Wifi Adapter${NC}"
 
 echo ""
 
 if [ "$EUID" -ne 0 ] then
-    echo "Installer must be run with ROOT permissions (sudo)"
+    echo "${RED}Installer must be run with ROOT permissions (sudo)${NC}"
     exit
 fi
 
-echo "Updating dependencies..."
+echo "${BLUE}Updating dependencies...${NC}"
 echo ""
 
 apt update
 
-echo "Installing packages..."
+echo "${BLUE}Installing packages...${NC}"
 echo ""
 
 apt install -y dkms git build-essential
 
-echo "Creating driver files..."
+echo "${BLUE}Creating driver files...${NC}"
 echo ""
 
 mkdir /etc/88x2bu-drivers
@@ -36,16 +36,16 @@ mv 88x2bu src
 cd src
 
 echo ""
-echo "Installing driver..."
+echo "${BLUE}Installing driver...${NC}"
 echo ""
 ./install-driver.sh [NoPrompt]
 
-echo "Driver installed successfully!"
-echo "Thanks for choosing The Official Dev Scripts!"
+echo "${BLUE}Driver installed successfully!${NC}"
+echo "${BLUE}Thanks for choosing The Official Dev Scripts!${NC}"
 echo ""
-echo "Device needs to be rebooted for changes to take effect"
-echo "Device will reboot automatically in 10 seconds."
-echo "To stop device from be rebooted automatically, Control + C"
+echo "${BLUE}Device needs to be rebooted for changes to take effect${NC}"
+echo "${BLUE}Device will reboot automatically in 10 seconds.${NC}"
+echo "${BLUE}To stop device from be rebooted automatically, Control + C${NC}"
 echo ""
 sleep 10
 reboot
